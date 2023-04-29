@@ -405,38 +405,6 @@ body.lock {
   font-family: "Josefin Slab";
   font-weight: 400;
 }
-.product__image {
-  width: 270px;
-  height: 300px;
-}
-.product__image img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  border-radius: 30px;
-  padding: 10px;
-}
-.product__item {
-  background-color: rgb(250, 248, 248);
-  max-width: 270px;
-  margin-bottom: 30px;
-  box-shadow: 7px 7px 10px 2px rgb(205, 203, 193);
-  border-radius: 10px;
-}
-.product__item:hover {
-  box-shadow: 5px 5px 40px 10px rgb(221, 220, 213);
-  transition: 350ms;
-}
-.product__item p {
-  font-family: "Josefin Slab";
-  padding: 5px;
-  text-align: center;
-  font-size: 18px;
-  line-height: 27px;
-}
 .product__item_title {
   font-family: "Josefin Slab";
   text-align: center;
@@ -448,8 +416,84 @@ body.lock {
   text-align: center;
 }
 
-#more {
-  display: none;
+.card {
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  max-width: 270px;
+  margin-bottom: 30px;
+  box-shadow: 7px 7px 15px 4px rgb(188, 183, 154);
+  border-radius: 10px;
+}
+.card :hover {
+  cursor: pointer;
+}
+.card p {
+  font-family: "Josefin Slab";
+  padding: 5px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.front {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  color: #312f2f;
+  background: #cfd4b2;
+}
+.front__image {
+  width: 270px;
+  height: 300px;
+}
+.front__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 30px;
+  padding: 10px;
+}
+.front__title {
+  font-family: "Josefin Slab";
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.back {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  color: #0f1d28;
+  background: #dbdc9b;
+}
+.back__description {
+  margin-bottom: 40px;
+}
+.back__price {
+  font-size: 20px;
+  background-color: #998431;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
 /* ________________section-five________________ */

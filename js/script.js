@@ -92,28 +92,30 @@ document.addEventListener(
 
 /* Скрипт валідації та відправки форми*/
 
-// Скрипт ефект flip перевороту карточки при натисканні на кнопку детальніше
-const card = document.querySelector('.product__item')
-const buttonClick = document.querySelector('#clickme')
+/* Cards */
+let cards = document.querySelectorAll(".card");
+let playing = false;
 
-
-if(buttonClick === card){
-    cardRotation()
-}   
-buttonClick = addEventListener('click', ()=>{
-    cardRotation()
-})
-
-function cardRotation() {
-    card.animate(
-        [
-            {transform: 'rotateY(180deg)'},
-
-        ], 
-        {duration: 500},
-        )
+for (let i = 0; i < cards.length; i++) {
+    let card = cards[i];
+    cards[i].addEventListener('click',function() {
+        if(playing)
+          return;
         
-} 
+        playing = true;
+        anime({
+          targets: card,
+          scale: [{value: 1.3}, {value: 1.3}, {value: 1, delay: 20}],
+          rotateY: {value: '+=180', delay: 150},
+          easing: 'easeInOutSine',
+          duration: 300,
+          complete: function(anim){
+             playing = false;
+          }
+        });
+      });
+}
+
 
 
 
