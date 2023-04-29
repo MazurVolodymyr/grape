@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homemade wines</title>
+    <!-- Головна іконка сайта -->
+    <link rel="icon" type="image/png" href="img/main-doc-icon/c.jpg">
+    <!-- Підключення CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/zero.css">
+    <!-- Шрифти -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,800,900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900&display=swap"
+        rel="stylesheet" />
+    <!-- Підключення бібліотеки для font-awesome (для кнопки наверх) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Scroll to top -->
+        <div class="isShowBtn isShowBtn_hide" id="scrollTop">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        <header class="header">
+            <div class="header__contain _container">
+                <div class="header__burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="header__nav menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#about" content="&nbsp;" data-scroll>&nbsp; Про нас&nbsp;</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#catalog" content="&nbsp;" data-scroll>&nbsp; Каталог&nbsp;</a>
+                        </li>
+                        <!-- <li class="menu__item">
+                            <a href="#colection" content="&nbsp;" data-scroll>&nbsp; Колекції&nbsp;</a>
+                        </li> -->
+                        <li class="menu__item">
+                            <a href="#contacts" content="&nbsp;" data-scroll>&nbsp; Контакти&nbsp;</a>
+                            <!-- &nbsp; Це просто предмет який не впливає на код але додає відступ перед текстом -->
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <main class="main">
+            <section class="section-one__fullscreen">
+                <div class="section-one__body">
+                    <div class="section-one__rectangle">
+                        <img src="img/bgc.jpg" alt="Картинка недоступна / error">
+                    </div>
+                    <div class="section-one__button-container">
+                        <div class="section-one__button">
+                            <a href="#howToFindUs" data-scroll>Як нас знайти</a>
+                            <a href="#excursion" data-scroll>Екскурсія</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="section-two__best" id="about">
+                <div class="section-two__body _container">
+                    <div class="section-two__contain">
+                        <h1 class="section-two__title">Від пагонів до пляшок - ми знаємо все про виноградництво.</h1>
+                        <span class="section-two__line"></span>
+                        <p class="section-two__text">Олег Сергійович – виноградар з досвідом більше 10 років. Він присвятив своє життя розвитку та підвищенню якості винограду в Україні. Олег знає кожну лозу своїх виноградників як власні п'яти пальців, а його досвід дозволяє досягати врожаїв високої якості. Завдяки його старанням та вмінням, виноград Олега вважається одним з найкращих у регіоні. Він працює з любов'ю та пристрастю до своєї справи, завжди дбаючи про кожну деталь у процесі вирощування винограду. Якщо ви шукаєте справжнього експерта в галузі виноградництва, Олег Сергійович – саме те, що вам потрібно !</p>
+                        <img src="img/glass-wine.png" alt="">
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="section-three_catalog" id="catalog">
+                <div class="section-three__body _container">
+                    <header class="section-three__header">
+                        <h2>Каталог всіх товарів</h2>
+                        <nav class="catalog-nav">
+                            <ul class="catalog-nav__contain">
+                                <li class="catalog-nav__item">
+                                    <a href="#grape" data-scroll class="catalog-nav__btn">Виноград</a>
+                                </li>
+                                <li class="catalog-nav__item">
+                                    <a href="#stalk" data-scroll class="catalog-nav__btn">Черінки</a>
+                                </li>
+                                <li class="catalog-nav__item">
+                                    <a href="#vine" data-scroll class="catalog-nav__btn">Вино</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </header>
+                    <div class="section-three__product product">
+                        <h3 id="grape" class="product__title">Каталог винограду</h3>
+                        <div class="product__grape" >
+                            <div class="product__item">
+                                <div class="product__image"> 
+                                    <img src="img/grape/arkadiya.jpg"alt="">
+                                </div>
+                                <h3 class="product__item_title" >Аркадія</h3>
+                                <p>"Аркадія" - це сорт середньостиглий винограду з великими китицями, солодким смаком і гарною транспортабельністю. Має тривалий термін зберігання і досить високу стійкість до захворювань.</p>
+                                <button id="clickme">ckick me</button>
+                            </div>
+                            <div class="product__item">
+                                <div class="product__image"> 
+                                    <img src="img/grape/Geliodor.jpg" alt="">
+                                </div>
+                                <h3 class="product__item_title">Геліодор</h3>
+                                <p>"Геліодор" - це сорт винограду з великими, жовтувато-зеленими ягодами, які мають товсту шкірку і хрусткий м'якуш. Має високу стійкість до захворювань і довгий термін зберігання.</p>
+                                
+                            </div>
+                            <div class="product__item">
+                                <div class="product__image"> 
+                                    <img src="img/grape/Viktoriya.jpg" alt="">
+                                </div>
+                                <h3 class="product__item_title">Вікторія</h3>
+                                <p>"Вікторія" - це середньостиглий сорт винограду з великими, округлими, темно-синіми ягодами. Має солодкий смак і високу врожайність, а також довгий термін зберігання і високу стійкість до захворювань.</p>
+                            </div>
+                            <div class="product__item">
+                                <div class="product__image"> 
+                                    <img src="img/grape/jupiter-1.jpg" alt="">
+                                </div>
+                                <h3 class="product__item_title">Юпітер</h3>
+                                <p>"Юпітер" - це сорт винограду з великими, червонувато-фіолетовими ягодами, міцною шкіркою і соковитим м'якушем. Має довгий термін зберігання і високу врожайність.</p>
+
+                            </div>
+                            <div class="product__item">
+                                <div class="product__image"> 
+                                    <img src="img/grape/velika.jpg" alt="">
+                                </div>
+                                <h3 class="product__item_title">Велика</h3>
+                                <p>Юпітер це найсмачніший виноград у світі його їдять у всіх країнах світу</p>
+                            </div>
+                            <div class="product__item">
+                                <div class="product__image"> 
+                                    <img src="img/grape/preobrazhenie.jpg" alt="">
+                                </div>
+                                <h3 class="product__item_title">Преображенія</h3>
+                                <p>Юпітер це найсмачніший виноград у світі його їдять у всіх країнах світу</p>
+                            </div>
+                            <div class="product__item">
+                                <div class="product__image"> 
+                                    <img src="img/grape/preobrazhenie.jpg" alt="">
+                                </div>
+                                <h3 class="product__item_title">Юпітер</h3>
+                                <p>Юпітер це найсмачніший виноград у світі його їдять у всіх країнах світу</p>
+                            </div>
+                            <div class="product__item">
+                                <div class="product__image"> 
+                                    <img src="img/grape/preobrazhenie.jpg" alt="">
+                                </div>
+                                <h3 class="product__item_title">Юпітер</h3>
+                                <p>Юпітер це найсмачніший виноград у світі його їдять у всіх країнах світу</p>
+                            </div>
+                        </div>
+                        <h3 id="stalk" class="product__title">Каталог черінків</h3>
+                        <div class="product__stalk">
+                            
+                        </div>
+                        <h3 id="vine" class="product__title">Каталог вина</h3>
+                        <div class="product__wine">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id=""></section>
+
+
+            <section class="section-five__record record">
+                <div class="record__contain _container">
+                    <h2 class="record__title" id="excursion">Запис на екскурсію</h2>
+                    <span class="section-two__line"></span>
+                    <img class="record__imageL" src="img/form/image-removebg-preview.png" alt="">
+                    <img class="record__imageR" src="img/form/image__1_-removebg-preview.png" alt="">
+                    <p class="record__text">Запрошуємо вас на захоплюючу подорож в світ вирощування винограду. Наша екскурсія пройде по прекрасних виноградниках, де ви зможете дізнатися багато цікавого про технології вирощування винограду, про секрети догляду за лозами та процеси переробки ягід. Ви отримаєте можливість побачити своїми очима, як з маленької виноградинки виростає неймовірно смачне вино. Кожен кущ винограду - це окрема історія, яка потребує багато років досвіду та турботи, але це дарує можливість насолоджуватися неперевершеним смаком ягід, який ніколи не забудеться. Не зволікайте, долучайтеся до нашої екскурсії вирощування винограду та отримайте незабутні враження від цього захоплюючого процесу!</p>
+                </div>
+            </section>
+            <p id="howToFindUs">Ми тут</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4171.275684421371!2d28.535593334255886!3d49.52103026529923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDnCsDMxJzE1LjciTiAyOMKwMzInMjEuMCJF!5e0!3m2!1suk!2sua!4v1682761424141!5m2!1suk!2sua" width="1300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </main>
+        <footer class="footer">
+
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
