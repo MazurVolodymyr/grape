@@ -397,39 +397,6 @@ body{
         font-family: 'Josefin Slab';
         font-weight: 400;
     }
-    &__image{
-        width: 270px;
-        height: 300px;
-        img{
-            // width: 100%;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 30px;
-            padding: 10px;
-        }
-    }
-    &__item {
-
-        background-color: rgb(250, 248, 248);
-        max-width: 270px;
-        margin-bottom: 30px;
-        box-shadow: 7px 7px 10px 2px rgb(205, 203, 193);
-        border-radius: 10px;
-        &:hover{
-            box-shadow: 5px 5px 40px 10px rgb(221, 220, 213);
-            transition: 350ms;
-        }
-        p{
-            font-family: 'Josefin Slab';
-            padding: 5px;
-            text-align: center;
-            font-size: 18px;
-            line-height: 27px;
-        }
-
-    }
     &__item_title{
         font-family: 'Josefin Slab';
         text-align: center;
@@ -442,10 +409,97 @@ body{
     }
 }
 
+//! створення ефекту flip та карточок
+.card {
+    border-radius: 10px;
+    transform-style: preserve-3d;
 
-#more{
-    display: none;
+    max-width: 270px;
+    margin-bottom: 30px;
+    box-shadow: 7px 7px 15px 4px rgb(188, 183, 154);
+    border-radius: 10px;
+    :hover{
+        cursor: pointer;
+    }
+    p{
+        font-family: 'Josefin Slab';
+        padding: 5px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 27px;
+    }
 }
+.front {    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  
+    border-radius: 10px;
+  
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    color: #312f2f;
+    background: #cfd4b2;
+		&__image {
+            width: 270px;
+            height: 300px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 30px;
+                padding: 10px;
+            }
+		}
+
+		&__title {
+            font-family: 'Josefin Slab';
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 24px;
+		}
+
+		&__description {
+		}
+}
+.back {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  
+    border-radius: 10px;
+  
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    transform: rotateY(180deg);
+  
+    color: #0f1d28;
+    background: #dbdc9b;
+
+		&__description {
+            margin-bottom: 40px;
+		}
+
+		&__price {
+            font-size: 20px;
+            background-color: #998431;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+		}
+}
+  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 /* ________________section-five________________ */
 .section-five {

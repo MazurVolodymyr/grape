@@ -96,7 +96,7 @@ document.addEventListener(
 let cards = document.querySelectorAll(".card");
 let playing = false;
 
-for (var i = 0; i < cards.length; i++) {
+for (let i = 0; i < cards.length; i++) {
     let card = cards[i];
     cards[i].addEventListener('click',function() {
         if(playing)
@@ -105,10 +105,10 @@ for (var i = 0; i < cards.length; i++) {
         playing = true;
         anime({
           targets: card,
-          scale: [{value: 1}, {value: 1.4}, {value: 1, delay: 250}],
-          rotateY: {value: '+=180', delay: 200},
+          scale: [{value: 1.3}, {value: 1.3}, {value: 1, delay: 20}],
+          rotateY: {value: '+=180', delay: 150},
           easing: 'easeInOutSine',
-          duration: 400,
+          duration: 300,
           complete: function(anim){
              playing = false;
           }
