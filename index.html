@@ -76,11 +76,17 @@
                         <h1 class="section-two__title">Від пагонів до пляшок - ми знаємо все про виноградництво.</h1>
                         <span class="section-two__line"></span>
                         <p class="section-two__text">Олег Сергійович – виноградар з досвідом більше 10 років. Він
+                           
                             присвятив своє життя розвитку та підвищенню якості винограду в Україні. Олег знає кожну лозу
+                           
                             своїх виноградників як власні п'яти пальців, а його досвід дозволяє досягати врожаїв високої
+                           
                             якості. Завдяки його старанням та вмінням, виноград Олега вважається одним з найкращих у
+                           
                             регіоні. Він працює з любов'ю та пристрастю до своєї справи, завжди дбаючи про кожну деталь
+                           
                             у процесі вирощування винограду. Якщо ви шукаєте справжнього експерта в галузі
+                           
                             виноградництва, Олег Сергійович – саме те, що вам потрібно !</p>
                         <img src="img/glass-wine.png" alt="">
                     </div>
@@ -458,10 +464,32 @@
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
     <script src="js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
 
+        document.getElementById('tg').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            let message = `<b>Замовлення з сайту!</b>\n`;
+            message += `<b>Відправник: </b> ${this.name.value}\n`;
+            message += `<b>Номер телефону: </b> ${this.telephone.value}\n`;
+            this.email.value.length > 0 ? message += `<b>Адреса електронної пошти: </b> ${this.email.value}\n` : console.log('Не вказана пошта');
+            this.comment.value.length > 0 ? message += `<b>Коментар до замовлення: </b> ${this.comment.value}\n`: console.log("Не вказаний коментар");
+            axios.post(URI_API, {
+                chat_id: CHAT_ID,
+                parse_mode: 'html',
+                text: message
+            }).then().catch().finally(() => {
+                this.name.value = ''
+                this.email.value = ''
+                this.telephone.value = ''
+                this.comment.value = ''
+            })
+        })
+
+    </script>
 </body>
 
 </html>
