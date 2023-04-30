@@ -90,8 +90,6 @@ document.addEventListener(
 } */
 
 
-/* Скрипт валідації та відправки форми*/
-
 /* Cards */
 let cards = document.querySelectorAll(".card");
 let playing = false;
@@ -105,10 +103,10 @@ for (let i = 0; i < cards.length; i++) {
         playing = true;
         anime({
           targets: card,
-          scale: [{value: 1.3}, {value: 1.3}, {value: 1, delay: 20}],
+          scale: [{value: 1.2}, {value: 1.2}, {value: 1, delay: 200}],
           rotateY: {value: '+=180', delay: 150},
           easing: 'easeInOutSine',
-          duration: 300,
+          duration: 500,
           complete: function(anim){
              playing = false;
           }
@@ -116,6 +114,50 @@ for (let i = 0; i < cards.length; i++) {
       });
 }
 
+
+/* Скрипт валідації та відправки форми*/
+
+document.getElementById('tg').addEventListener('submit', function (e) {
+    e.preventDefault();
+// Валідація форми
+// let formInputs = document.querySelectorAll('.js-input')
+// let inputEmail = document.querySelector('.js-input-email')
+// let inputPhone = document.querySelector('.js-input-phone')
+
+// let emailVal = inputEmail.value ,
+//     phoneVal = inputPhone.value ;
+
+// formInputs.forEach( (input) =>{
+//     if(input.value === ''){
+//         input.classList.add('error');
+//     }else{
+//         input.classList.remove('error')
+//     }
+// })
+
+// Відправка форми
+const TOKEN = '6006103677:AAEDNp3ZKzv6WYYU46bLOhUvjQrUzkeXdbA';
+const CHAT_ID = '-1001905089338';
+const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+
+
+    let message = `<b>Замовлення з сайту!</b>\n`;
+    message += `<b>Відправник: </b> ${this.name.value}\n`;
+    message += `<b>Номер телефону: </b> ${this.telephone.value}\n`;
+    this.email.value.length > 0 ? message += `<b>Адреса електронної пошти: </b> ${this.email.value}\n` : console.log('Не вказана пошта');
+    this.comment.value.length > 0 ? message += `<b>Коментар до замовлення: </b> ${this.comment.value}\n` : console.log("Не вказаний коментар");
+    axios.post(URI_API, {
+        chat_id: CHAT_ID,
+        parse_mode: 'html',
+        text: message
+    }).then().catch().finally(() => {
+        this.name.value = ''
+        this.email.value = ''
+        this.telephone.value = ''
+        this.comment.value = ''
+    })
+})
 
 
 

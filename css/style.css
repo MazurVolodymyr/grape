@@ -2,6 +2,7 @@
 /*Обнуление*/
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,500;0,600;1,200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -92,6 +93,19 @@ body.lock {
 
 .main {
   flex: 1 1 auto;
+}
+
+.footer {
+  width: 100%;
+  height: calc(50px + 30 * (100vw - 320px) / 820);
+  background-color: #998431;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__myContacts {
+  font-family: "Josefin Slab";
+  font-size: calc(20px + 8 * (100vw - 320px) / 820);
 }
 
 #scrollTop {
@@ -298,14 +312,14 @@ body.lock {
   text-align: center;
 }
 .section-two__title {
-  font-size: 50px;
+  font-size: 36px;
   font-family: "Playfair Display";
   margin-bottom: 40px;
-  line-height: calc(20px + 38 * (100vw - 320px) / 820);
+  line-height: calc(20px + 20 * (100vw - 320px) / 820);
 }
 @media (max-width: 1200px) {
   .section-two__title {
-    font-size: calc(20px + 30 * (100vw - 320px) / 820);
+    font-size: calc(20px + 16 * (100vw - 320px) / 820);
   }
 }
 .section-two__line {
@@ -361,9 +375,9 @@ body.lock {
   margin-bottom: 50px;
 }
 .catalog-nav__item {
-  font-size: calc(9px + 9 * (100vw - 320px) / 820);
-  width: calc(60px + 120 * (100vw - 320px) / 820);
-  height: calc(30px + 20 * (100vw - 320px) / 820);
+  font-size: calc(13px + 5 * (100vw - 320px) / 820);
+  width: calc(70px + 110 * (100vw - 320px) / 820);
+  height: calc(35px + 15 * (100vw - 320px) / 820);
   border-radius: 10%;
   transition: 200ms;
   background-color: rgb(82, 3, 3);
@@ -421,18 +435,22 @@ body.lock {
   transform-style: preserve-3d;
   max-width: 270px;
   margin-bottom: 30px;
-  box-shadow: 7px 7px 15px 4px rgb(188, 183, 154);
+  box-shadow: 7px 7px 15px 4px rgb(179, 172, 138);
   border-radius: 10px;
+  margin-bottom: 80px;
 }
 .card :hover {
   cursor: pointer;
 }
-.card p {
-  font-family: "Josefin Slab";
-  padding: 5px;
-  text-align: center;
-  font-size: 18px;
-  line-height: 27px;
+@media (max-width: 680px) {
+  .card.card {
+    max-width: 220px;
+  }
+}
+@media (max-width: 500px) {
+  .card.card {
+    max-width: 130px;
+  }
 }
 
 .front {
@@ -444,8 +462,7 @@ body.lock {
   justify-content: center;
   align-items: center;
   backface-visibility: hidden;
-  color: #312f2f;
-  background: #cfd4b2;
+  background: #e7eacb;
 }
 .front__image {
   width: 270px;
@@ -461,12 +478,64 @@ body.lock {
   border-radius: 30px;
   padding: 10px;
 }
+@media (max-width: 680px) {
+  .front__image {
+    width: 220px;
+    height: 250px;
+  }
+}
+@media (max-width: 500px) {
+  .front__image {
+    width: 130px;
+    height: 160px;
+  }
+}
 .front__title {
   font-family: "Josefin Slab";
   text-align: center;
-  margin-bottom: 10px;
-  font-size: 24px;
+  margin-bottom: 15px;
+  font-size: 27px;
+  color: #312f2f;
 }
+@media (max-width: 500px) {
+  .front__title {
+    font-size: 16px;
+  }
+}
+.front__description p {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+@media (max-width: 500px) {
+  .front__description p {
+    font-size: 14px;
+  }
+}
+.front__price {
+  font-size: 22px;
+  background-color: #429931;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 270px;
+  opacity: 0.7;
+  font-family: "Lobster";
+}
+@media (max-width: 680px) {
+  .front__price {
+    width: 220px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .front__price {
+    width: 130px;
+    font-size: 17px;
+  }
+}
+
 .back {
   display: flex;
   flex-direction: column;
@@ -483,17 +552,25 @@ body.lock {
   color: #0f1d28;
   background: #dbdc9b;
 }
-.back__description {
-  margin-bottom: 40px;
+.back__description p {
+  font-family: "Josefin Slab";
+  padding: 5px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 27px;
 }
-.back__price {
-  font-size: 20px;
-  background-color: #998431;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
+@media (max-width: 680px) {
+  .back__description p {
+    padding: 4px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .back__description p {
+    padding: 4px;
+    font-size: 12px;
+    line-height: 13px;
+  }
 }
 
 /* ________________section-five________________ */
@@ -540,39 +617,88 @@ body.lock {
 }
 .record__text {
   color: #fff;
-  max-width: 540px;
-  font-size: calc(10px + 5 * (100vw - 320px) / 820);
-  line-height: 34px;
+  max-width: 740px;
+  font-size: calc(13px + 3 * (100vw - 320px) / 820);
+  line-height: calc(22px + 11 * (100vw - 320px) / 820);
   margin: auto;
   text-align: center;
   padding-bottom: 40px;
 }
-/* ________________/section-five________________ */
-/* Form-feature */
-.senform {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.record__find-us {
+  color: #fff;
+  font-size: calc(16px + 6 * (100vw - 320px) / 820);
+  margin-bottom: 30px;
+}
+.record__map {
   width: 100%;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+/* Form-feature */
+.sendform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .form-group {
+  color: #fff;
   margin: 10px 0;
+  width: 100%;
 }
-
 .form-group input {
   border: #0f1d28 1px solid;
   padding: 5px;
   border-radius: 5px;
+  font-size: 17px;
   width: 100%;
 }
-
 .form-group button {
-  background-color: #ddc562;
-  padding: 5px;
-  color: white;
-  text-transform: capitalize;
-  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  color: #382b22;
+  text-transform: uppercase;
+  padding: 1.25em 2em;
+  background: #fff0f0;
+  border: 2px solid #b18597;
+  border-radius: 0.75em;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+.form-group button:hover {
+  background: #ffe9e9;
+  transform: translate(0, 0.25em);
+}
+.form-group button:hover::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+  transform: translate3d(0, 0.5em, -1em);
+}
+.form-group button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f9c4d2;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.form-group button:active {
+  background: #ffe9e9;
+  transform: translate(0em, 0.75em);
+}
+.form-group button:active::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  transform: translate3d(0, 0, -1em);
 }
 
 .form-group:has(> button) {
@@ -590,3 +716,10 @@ body.lock {
   flex-direction: column;
   width: 300px;
 }
+
+.error {
+  border: red;
+}
+
+/* /Form-feature */
+/* ________________/section-five________________ */
