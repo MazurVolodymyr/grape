@@ -69,26 +69,6 @@ document.addEventListener(
   );
   
 
-/* Кнопка інформації на секції каталогу */
-
-/* function readMore(){
-    const dots = document.getElementById("dots");
-    const more = document.getElementById("more");
-    const btnMoreInfo = document.getElementById("moreInfo");
-
-    if(dots.style.display === "none"){
-        dots.style.display="inline";
-        btnMoreInfo.innerHTML="Детально";
-        more.style.display="none";
-    } else {
-        {
-            dots.style.display="none";
-            btnMoreInfo.innerHTML="Закрити";
-            more.style.display="inline";
-        }
-    }
-} */
-
 
 /* Cards */
 let cards = document.querySelectorAll(".card");
@@ -158,6 +138,36 @@ const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
         this.comment.value = ''
     })
 })
+
+//! скрипт swiper slider
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    effect: 'slider',
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // автопролистування
+    autoplay: {
+        delay: 800,
+    },
+    speed: 1800,
+    slidesPerView: 4,
+
+
+  });
+
+
 
 
 

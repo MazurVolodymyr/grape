@@ -8,6 +8,8 @@
     <title>Homemade wines</title>
     <!-- Головна іконка сайта -->
     <link rel="icon" type="image/png" href="img/main-doc-icon/c.jpg">
+    <!-- Підключення стилів swiper slider -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <!-- Підключення CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/zero.css">
@@ -482,7 +484,7 @@
                         </div>
                         <h3 id="stalk" class="product__title">Каталог черінків</h3>
                         <div class="product__stalk">
-
+                            
                         </div>
                         <h3 id="vine" class="product__title">Каталог вина</h3>
                         <div class="product__wine">
@@ -508,7 +510,45 @@
                         смачне вино. Кожен кущ винограду - це окрема історія, яка потребує багато років досвіду та
                         турботи, але це дарує можливість насолоджуватися неперевершеним смаком ягід, який ніколи не
                         забудеться. Не зволікайте, долучайтеся до нашої екскурсії вирощування винограду та отримайте
-                        незабутні враження від цього захоплюючого процесу!</p>
+                        незабутні враження від цього захоплюючого процесу!
+                    </p>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="img/swiper-icons/JPEG/1.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/swiper-icons/JPEG/2.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/swiper-icons/JPEG/3.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/swiper-icons/JPEG/4.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/swiper-icons/JPEG/5.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/swiper-icons/JPEG/6.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/swiper-icons/JPEG/7.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/swiper-icons/JPEG/8.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/swiper-icons/JPEG/9.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/swiper-icons/JPEG/10.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/swiper-icons/JPEG/11.jpg" alt=""></div>
+                            <!-- <div class="swiper-slide"><img src="img/swiper-icons/1.JPG" alt=""></div>
+                            <div class="swiper-slide"><img src="img/swiper-icons/2.JPG" alt=""></div>
+                            <div class="swiper-slide"><img src="img/swiper-icons/3.JPG" alt=""></div>
+                            <div class="swiper-slide"><img src="img/swiper-icons/4.JPG" alt=""></div>
+                            <div class="swiper-slide"><img src="img/swiper-icons/5.JPG" alt=""></div>
+                            <div class="swiper-slide"><img src="img/swiper-icons/6.JPG" alt=""></div> -->
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination">
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <!-- <div class="swiper-button-prev">
+
+                        </div>
+                        <div class="swiper-button-next">
+
+                        </div> -->
+                    </div>
+
+
+
                         <div class="sendform">
                             <form id="tg">
                                 <div class="form-group">
@@ -550,6 +590,8 @@
         </footer>
     </div>
 
+
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
     <script src="js/script.js"></script>
