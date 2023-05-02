@@ -759,18 +759,37 @@ body{
   }
   
   .form-group {
-
+    span {
+        color: red;
+    }
     color: #fff;
     margin: 10px 0;
     width: 100%;
-
+    input.rqrd {
+        border-color: red;
+        animation: inputAnim 1s ease-in-out;
+    }
     input {
         border: #0f1d28 1px solid;
         padding: 5px;
         border-radius: 5px;
         font-size: 17px;
         width: 100%;
+        line-height: 32px;
+        margin: 0 0 5px 0;
       }
+     /*  input:invalid {
+        border: 1px solid red;
+      } */
+      
+      /* input:invalid:required {
+        background-image: linear-gradient(to right, pink, lightgreen);
+      } */
+      
+      /* input:valid {
+        border: 1px solid #0f1d28;
+      } */
+      
     button {
         position: relative;
         display: inline-block;
@@ -842,3 +861,28 @@ body{
   /* /Form-feature */
 /* ________________/section-five________________ */
 
+@keyframes inputAnim {
+    0% {
+        transform: translateX(0%);
+        background-color: red;
+    }
+    15% {
+        transform: translateX(1%);
+    }
+    30% {
+        transform: translateX(-1%);
+    }
+    45% {
+        transform: translateX(1%);
+    }
+    60% {
+        transform: translateX(-1%);
+    }
+    85% {
+        transform: translateX(1%);
+    }
+    100% {
+        transform: translateX(0%);
+        background-color: #ffdcdc;
+    }
+}
