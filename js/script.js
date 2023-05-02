@@ -164,8 +164,26 @@ const swiper = new Swiper('.swiper', {
     speed: 1800,
     slidesPerView: 4,
 
-
+    loop: true,
   });
+
+
+
+
+
+//! скрипт для каталогу черенків
+const rows = document.querySelectorAll('.row');
+
+rows.forEach(row => {
+
+const button = row.querySelector('.button');
+
+button.addEventListener('click', () => {
+  const bottom = row.querySelector('.bottom');
+  bottom.classList.toggle('active');
+  });
+});
+
 
 
 

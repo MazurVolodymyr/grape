@@ -565,6 +565,81 @@ body{
 		}
 }
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+//! робота з каталогом черенків
+
+.row {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+    margin-bottom: 10px;
+}
+.top {
+	background-color: #a4a28f;
+	padding: 15px 5px;
+	display: flex;
+	align-items: center;
+    border-radius: 10px;
+}
+.name {
+	flex: 0 1 80%;
+    font-size: 22px;
+}
+
+.price {
+	display: flex;
+	flex: 0 1 20%;
+	justify-content: center;
+    font-size: 22px;
+}
+.button{
+	background-color: #fafafa;
+	border-radius: 50%;
+    font-size: 25px;
+    width: 60px;
+    height: 60px;
+	cursor: pointer;
+}
+.fa-hand-point-up{
+    color: #96d61f;
+}
+
+.description {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	flex: 1 1 auto;
+    font-size: 18px;
+}
+.imgage{
+	padding: 10px;
+    width: 100px;
+    height: 150px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.bottom {
+	display: none;
+	font-size: 25px;
+	transition: all 0.3s ease;
+}
+.active {
+	display: flex;
+	transition: all 1s ease;
+	background-color: #e4e4d7;
+}
+//! ////////////////////////////////////////
+
+
+
+
+
+
 //!!! робота з swiper
 .swiper{
     margin-bottom: 30px;
