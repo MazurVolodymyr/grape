@@ -144,7 +144,6 @@ let validationForm = () => {
   !comment ? addErrorSpan(commElem.parentNode, "Це поле обов'язкове") : commElem.parentNode.querySelector('span') && commElem.parentNode.removeChild(commElem.parentNode.querySelector('span'))
   !comment ? commElem.classList.add('rqrd') : commElem.classList.remove('rqrd')
 
-
 }
 
 let sendForm = document.getElementById('tg')
