@@ -99,7 +99,7 @@ body.lock {
 
 .footer {
   width: 100%;
-  height: calc(170px + 80 * (100vw - 320px) / 820);
+  height: calc(280px + 50 * (100vw - 320px) / 820);
   background-color: #E6E3C4;
   display: flex;
   justify-content: center;
@@ -113,18 +113,29 @@ body.lock {
   font-size: calc(17px + 9 * (100vw - 320px) / 820);
 }
 .footer__Oleg {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 15px;
+  gap: 15px;
 }
 .footer__Oleg a {
   color: #000000;
 }
 .footer__Svitlana {
-  margin-bottom: calc(13px + 33 * (100vw - 320px) / 820);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 15px;
 }
 .footer__Svitlana a {
   color: #000000;
 }
 .footer__myContacts {
+  padding-top: 50px;
   font-family: "Josefin Slab";
   font-size: calc(18px + 8 * (100vw - 320px) / 820);
 }

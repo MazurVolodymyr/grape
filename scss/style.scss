@@ -32,7 +32,7 @@ body{
 }
 .footer {
     width: 100%;
-    height: calc(170px + (250 - 170)*((100vw - 320px)/(1140 - 320)));
+    height: calc(280px + (330 - 280)*((100vw - 320px)/(1140 - 320)));
     background-color: #E6E3C4;
     display: flex;
     justify-content: center;
@@ -45,18 +45,30 @@ body{
         font-size: calc(17px + (26 - 17)*((100vw - 320px)/(1140 - 320)));
     }
     &__Oleg{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 15px;
+        gap: 15px;
         a{
             color: #000000;
         }
     }
     &__Svitlana{
-        margin-bottom: calc(13px + (46 - 13)*((100vw - 320px)/(1140 - 320)));
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        gap: 15px;
         a{
             color: #000000;
         }
     }
     &__myContacts{
+
+        padding-top: 50px;
         font-family: 'Josefin Slab';
         font-size: calc(18px + (26 - 18)*((100vw - 320px)/(1140 - 320)));
     }
