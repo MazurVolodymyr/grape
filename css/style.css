@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -98,19 +99,40 @@ body.lock {
 
 .footer {
   width: 100%;
-  height: calc(100px + 20 * (100vw - 320px) / 820);
-  background-color: #998431;
+  height: calc(170px + 80 * (100vw - 320px) / 820);
+  background-color: #E6E3C4;
   display: flex;
-  align-items: center;
   justify-content: center;
+  letter-spacing: 2px;
 }
 .footer p {
+  letter-spacing: calc(1px + 2 * (100vw - 320px) / 820);
+  margin-top: 15px;
+  text-align: center;
   margin-bottom: 20px;
   font-size: calc(17px + 9 * (100vw - 320px) / 820);
+}
+.footer__Oleg {
+  margin-bottom: 15px;
+}
+.footer__Svitlana {
+  margin-bottom: calc(13px + 33 * (100vw - 320px) / 820);
 }
 .footer__myContacts {
   font-family: "Josefin Slab";
   font-size: calc(18px + 8 * (100vw - 320px) / 820);
+}
+.footer__social {
+  display: flex;
+  justify-content: space-around;
+  font-size: calc(22px + 6 * (100vw - 320px) / 820);
+}
+.footer__social a {
+  color: #424035;
+}
+
+.fa-phone {
+  color: rgb(66, 56, 35);
 }
 
 #scrollTop {
@@ -279,7 +301,7 @@ body.lock {
 }
 .section-one__button a {
   display: block;
-  background-color: #998431;
+  background-color: #94814b;
   color: white;
   text-transform: uppercase;
   font-size: 17px;
@@ -401,6 +423,9 @@ body.lock {
   width: 100%;
   color: #fff;
 }
+.product {
+  padding-bottom: 40px;
+}
 .product__grape {
   display: flex;
   flex-wrap: wrap;
@@ -415,16 +440,23 @@ body.lock {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  border: 2px solid rgba(255, 255, 255, 0.642);
+  padding: 20px;
+  margin-bottom: 30px;
 }
 .product__wine p {
   font-family: "Playfair Display";
   color: #282828;
-  max-width: 800px;
+  max-width: 1200px;
   font-size: calc(13px + 4 * (100vw - 320px) / 820);
   line-height: calc(22px + 11 * (100vw - 320px) / 820);
   margin: auto;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+}
+.product__wine-bottles {
+  display: flex;
+  flex-wrap: wrap;
 }
 .product__title {
   color: #282828;
@@ -506,10 +538,12 @@ body.lock {
   }
 }
 .front__title {
-  font-family: "Josefin Slab";
+  font-family: "Forum";
+  font-weight: 600;
   text-align: center;
   margin-bottom: 15px;
-  font-size: 27px;
+  font-size: 26px;
+  opacity: 0.9;
   color: #312f2f;
 }
 @media (max-width: 500px) {
@@ -519,8 +553,9 @@ body.lock {
 }
 .front__description p {
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 10px;
+  font-family: "Forum";
 }
 @media (max-width: 500px) {
   .front__description p {
@@ -528,7 +563,7 @@ body.lock {
   }
 }
 .front__price {
-  font-size: 22px;
+  font-size: 26px;
   background-color: #429931;
   display: flex;
   align-items: center;
@@ -536,7 +571,8 @@ body.lock {
   height: 100%;
   width: 270px;
   opacity: 0.7;
-  font-family: "Lobster";
+  font-weight: 700;
+  font-family: "Forum";
 }
 @media (max-width: 680px) {
   .front__price {
@@ -596,11 +632,11 @@ body.lock {
   margin-bottom: 10px;
 }
 .row:last-child {
-  margin-bottom: 35px;
+  margin-bottom: 55px;
 }
 
 .top {
-  background-color: #919280;
+  background-color: rgb(192, 176, 128);
   padding: 2px 2px;
   display: flex;
   align-items: center;
@@ -612,6 +648,7 @@ body.lock {
   font-size: 23px;
   margin-left: 50px;
   letter-spacing: 1px;
+  font-family: "Forum";
 }
 @media (max-width: 480px) {
   .name {
@@ -682,8 +719,100 @@ body.lock {
   display: flex;
   transition: all 1s ease;
   background-color: rgba(248, 255, 252, 0.6941176471);
+  border-radius: 5px;
 }
 
+.wine-bottles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottle-wine__cards {
+  width: 270px;
+  margin: 15px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0.5px 0.5px 2px 1px rgba(164, 163, 163, 0.614);
+}
+@media (max-width: 680px) {
+  .bottle-wine__cards {
+    max-width: 220px;
+  }
+}
+@media (max-width: 500px) {
+  .bottle-wine__cards {
+    max-width: 140px;
+  }
+}
+.bottle-wine__wrap-img {
+  width: 170px;
+  height: 310px;
+  margin: 0 auto;
+}
+@media (max-width: 680px) {
+  .bottle-wine__wrap-img {
+    width: 150px;
+    height: 270px;
+  }
+}
+@media (max-width: 500px) {
+  .bottle-wine__wrap-img {
+    width: 130px;
+    height: 240px;
+  }
+}
+.bottle-wine__wrap-img:hover {
+  animation: bottleAnim 1s ease-in-out;
+}
+.bottle-wine__wrap-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.bottle-wine__title {
+  text-align: center;
+  font-family: "Forum";
+  font-size: calc(18px + 10 * (100vw - 320px) / 820);
+  margin-bottom: 10px;
+}
+.bottle-wine__description {
+  text-align: center;
+  font-family: "Forum";
+  font-size: calc(17px + 4 * (100vw - 320px) / 820);
+}
+
+@keyframes bottleAnim {
+  0% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(1%);
+    transform: rotate(6deg);
+  }
+  30% {
+    transform: translateX(-1%);
+    transform: rotate(-4deg);
+  }
+  45% {
+    transform: translateX(1%);
+    transform: rotate(4deg);
+  }
+  60% {
+    transform: translateX(-1%);
+    transform: rotate(-3deg);
+  }
+  85% {
+    transform: translateX(1%);
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: translateX(0%);
+    transform: rotate(0);
+  }
+}
 .swiper {
   margin-bottom: 30px;
 }
