@@ -115,8 +115,14 @@ body.lock {
 .footer__Oleg {
   margin-bottom: 15px;
 }
+.footer__Oleg a {
+  color: #000000;
+}
 .footer__Svitlana {
   margin-bottom: calc(13px + 33 * (100vw - 320px) / 820);
+}
+.footer__Svitlana a {
+  color: #000000;
 }
 .footer__myContacts {
   font-family: "Josefin Slab";

@@ -46,9 +46,15 @@ body{
     }
     &__Oleg{
         margin-bottom: 15px;
+        a{
+            color: #000000;
+        }
     }
     &__Svitlana{
         margin-bottom: calc(13px + (46 - 13)*((100vw - 320px)/(1140 - 320)));
+        a{
+            color: #000000;
+        }
     }
     &__myContacts{
         font-family: 'Josefin Slab';
