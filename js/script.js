@@ -149,14 +149,7 @@ let validationForm = () => {
 
 }
 
-/* let showPreloader = () => {
-  let form = document.querySelectorAll('.form-group')
-  for(let i = 0; i < form.length; i++) {
-    form[i].style.display = 'none';
-  }
-  let preloader = document.querySelector('.preloader')
-  preloader.style.display = 'flex'
-} */
+
 let togglePreloader = () => {
   let form = document.querySelectorAll('.form-group')
   for(let i = 0; i < form.length; i++) {
@@ -250,7 +243,7 @@ rows.forEach(row => {
 
   button.addEventListener('click', () => {
     const bottom = row.querySelector('.bottom');
-    bottom.classList.toggle('active');
+    bottom.classList.toggle('activeWine');
   });
 });
 

@@ -721,11 +721,11 @@ body.lock {
   transition: all 0.3s ease;
 }
 
-.active {
+.activeWine {
   display: flex;
   transition: all 1s ease;
-  background-color: rgba(248, 255, 252, 0.6941176471);
   border-radius: 5px;
+  background-color: white;
 }
 
 .wine-bottles {
@@ -784,6 +784,12 @@ body.lock {
   font-family: "Forum";
   font-size: calc(18px + 10 * (100vw - 320px) / 820);
   margin-bottom: 10px;
+  height: 70px;
+}
+@media (max-width: 500px) {
+  .bottle-wine__title {
+    height: 40px;
+  }
 }
 .bottle-wine__description {
   text-align: center;
@@ -834,7 +840,7 @@ body.lock {
 .swiper-slide {
   width: 500px;
   height: auto;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 .swiper-slide img {
   height: 100%;
@@ -944,13 +950,8 @@ body.lock {
 }
 
 .form-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: #fff;
   margin: 10px 0;
   width: 100%;
@@ -1053,41 +1054,24 @@ body.lock {
 /* ________________/section-five________________ */
 .preloader {
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 50px 0;
 }
 .preloader__description {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-size: 24px;
-  -webkit-animation: textAnimE 2s ease-in-out infinite;
-          animation: textAnimE 2s ease-in-out infinite;
+  animation: textAnimE 2s ease-in-out infinite;
   color: #fff;
 }
 
 .fetched {
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: green;
   font-weight: 500;
@@ -1099,39 +1083,6 @@ body.lock {
   font-weight: 900;
   font-size: 36px;
   padding: 20px 0;
-}
-
-@-webkit-keyframes inputAnim {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    background-color: red;
-  }
-  15% {
-    -webkit-transform: translateX(1%);
-            transform: translateX(1%);
-  }
-  30% {
-    -webkit-transform: translateX(-1%);
-            transform: translateX(-1%);
-  }
-  45% {
-    -webkit-transform: translateX(1%);
-            transform: translateX(1%);
-  }
-  60% {
-    -webkit-transform: translateX(-1%);
-            transform: translateX(-1%);
-  }
-  85% {
-    -webkit-transform: translateX(1%);
-            transform: translateX(1%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    background-color: #ffdcdc;
-  }
 }
 
 @keyframes inputAnim {
@@ -1157,14 +1108,6 @@ body.lock {
   100% {
     transform: translateX(0%);
     background-color: #ffdcdc;
-  }
-}
-@-webkit-keyframes textAnimE {
-  0% {
-    color: #fff;
-  }
-  50% {
-    color: rgba(255, 255, 255, 0.6431372549);
   }
 }
 @keyframes textAnimE {

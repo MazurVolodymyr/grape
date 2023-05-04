@@ -705,11 +705,11 @@ body{
 	font-size: 25px;
 	transition: all 0.3s ease;
 }
-.active {
+.activeWine {
 	display: flex;
 	transition: all 1s ease;
-	background-color: #f8fffcb1;
     border-radius: 5px;
+    background-color: white;
 }
 //! ////////////////////////////////////////
 
@@ -768,6 +768,10 @@ body{
             font-family: 'Forum';
             font-size: calc(18px + (28 - 18)*((100vw - 320px)/(1140 - 320)));
             margin-bottom: 10px;
+            height: 70px;
+            @media (max-width: 500px) {
+                height: 40px;
+            }
 		}
 
 		&__description {
@@ -827,7 +831,7 @@ body{
 .swiper-slide {
     width: 500px;
     height:auto;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     img{
         height: 100%;
         width: 100%;
