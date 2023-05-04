@@ -936,6 +936,8 @@ body{
   }
   
   .form-group {
+    display: flex;
+    flex-direction: column;
     span {
         color: red;
     }
@@ -1013,6 +1015,9 @@ body{
             box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
             transform: translate3d(0, 0, -1em);
         }
+        &:disabled {
+            background: #000;
+        }
       }
   }
 
@@ -1038,6 +1043,40 @@ body{
   /* /Form-feature */
 /* ________________/section-five________________ */
 
+.preloader {
+    display: none;
+    flex-direction: column;
+    padding: 50px 0;
+    &__description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 24px;
+        animation: textAnimE 2s ease-in-out infinite;
+        color: #fff;
+    }
+}
+
+.fetched {
+    display: none;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: green;
+    font-weight: 500;
+    font-size: 28px;
+    padding: 164.5px 0;
+}
+
+.checkmark {
+    
+    font-weight: 900;
+    font-size: 36px;
+    padding: 20px 0;
+}
+
 @keyframes inputAnim {
     0% {
         transform: translateX(0%);
@@ -1061,5 +1100,14 @@ body{
     100% {
         transform: translateX(0%);
         background-color: #ffdcdc;
+    }
+}
+
+@keyframes textAnimE {
+    0% {
+        color: #fff;
+    }
+    50% {
+        color: #ffffffa4;
     }
 }

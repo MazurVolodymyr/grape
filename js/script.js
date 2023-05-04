@@ -96,6 +96,9 @@ for (let i = 0; i < cards.length; i++) {
 
 
 /* Скрипт валідації та відправки форми*/
+
+let isFetching = false
+
 let nullRequired = () => {
   let xArr = document.querySelectorAll("input");
   for(let i = 0; i<xArr.length; i++) {
@@ -146,16 +149,34 @@ let validationForm = () => {
 
 }
 
+/* let showPreloader = () => {
+  let form = document.querySelectorAll('.form-group')
+  for(let i = 0; i < form.length; i++) {
+    form[i].style.display = 'none';
+  }
+  let preloader = document.querySelector('.preloader')
+  preloader.style.display = 'flex'
+} */
+let togglePreloader = () => {
+  let form = document.querySelectorAll('.form-group')
+  for(let i = 0; i < form.length; i++) {
+    form[i].style.display = 'none';
+  }
+  let preloader = document.querySelector('.preloader')
+  preloader.style.display = 'flex'
+}
+
 let sendForm = document.getElementById('tg')
 sendForm.addEventListener('submit', function (e) {
+  togglePreloader()
+  document.getElementById('submitButton').disabled = true
   e.preventDefault();
 
   const TOKEN = '6006103677:AAEDNp3ZKzv6WYYU46bLOhUvjQrUzkeXdbA';
   const CHAT_ID = '-1001905089338';
   const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
-  let message = `<b>Замовлення з сайту!</b>\n`;
-  message += `<b>Відправник: </b> ${this.name.value}\n`;
+  let message =  `<b>Відправник: </b> ${this.name.value}\n`;
   message += `<b>Номер телефону: </b> ${this.telephone.value}\n`;
   this.email.value.length > 0 ? message += `<b>Адреса електронної пошти: </b> ${this.email.value}\n` : console.log('Не вказана пошта');
   message += `<b>Коментар до замовлення: </b> ${this.comment.value}\n`;
@@ -166,11 +187,22 @@ sendForm.addEventListener('submit', function (e) {
       chat_id: CHAT_ID,
       parse_mode: 'html',
       text: message
-    }).then().catch().finally(() => {
+    }).then(() => {
+      
+      //console.log(res);
+      togglePreloader()
+    }
+    ).catch().finally(() => {
+      isFetching = false
+      document.getElementById('submitButton').disabled = false
       this.name.value = ''
       this.email.value = ''
       this.telephone.value = ''
       this.comment.value = ''
+      let preloader = document.querySelector('.preloader')
+      preloader.style.display = 'none'
+      let accepted = document.querySelector('.fetched')
+      accepted.style.display = 'flex'
     })
   }
   

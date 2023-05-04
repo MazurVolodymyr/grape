@@ -881,36 +881,91 @@
                         </div> -->
                     </div>
 
-                        <div class="sendform">
-                            <form id="tg" name="mainForm">
-                                <div class="form-group">
-                                    <p>Ваше ім'я</p>
-                                    <input type="text" name="name" class="js-input" onchange="validationForm()"/>
+
+
+                    <div class="sendform">
+                        <form id="tg" name="mainForm">
+                            <div class="form-group">
+                                <p>Ваше ім'я</p>
+                                <input type="text" name="name" class="js-input" onchange="validationForm()" />
+                            </div>
+                            <div class="form-group">
+                                <p>Номер телефону</p>
+                                <input type="tel" name="telephone" class="js-input-phone" onchange="validationForm()" />
+                            </div>
+                            <div class="form-group">
+                                <p>E-mail (необов'язково)</p>
+                                <input type="email" name="email" class="js-input js-input-email" />
+                            </div>
+                            <div class="form-group">
+                                <p>Ваш коментар</p>
+                                <input type="text" name="comment" class="js-input" onchange="validationForm()" />
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" id="submitButton">Записатись на екскурсію</button>
+                            </div>
+                            <div class="preloader">
+                                <svg viewBox="0 0 100 100">
+                                    <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="6">
+                                        <!-- left line -->
+                                        <path d="M 21 40 V 59">
+                                            <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+                                                values="0 21 59; 180 21 59" dur="2s" repeatCount="indefinite" />
+                                        </path>
+                                        <!-- right line -->
+                                        <path d="M 79 40 V 59">
+                                            <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+                                                values="0 79 59; -180 79 59" dur="2s" repeatCount="indefinite" />
+                                        </path>
+                                        <!-- top line -->
+                                        <path d="M 50 21 V 40">
+                                            <animate attributeName="d" values="M 50 21 V 40; M 50 59 V 40" dur="2s"
+                                                repeatCount="indefinite" />
+                                        </path>
+                                        <!-- btm line -->
+                                        <path d="M 50 60 V 79">
+                                            <animate attributeName="d" values="M 50 60 V 79; M 50 98 V 79" dur="2s"
+                                                repeatCount="indefinite" />
+                                        </path>
+                                        <!-- top box -->
+                                        <path d="M 50 21 L 79 40 L 50 60 L 21 40 Z">
+                                            <animate attributeName="stroke"
+                                                values="rgba(255,255,255,1); rgba(100,100,100,0)" dur="2s"
+                                                repeatCount="indefinite" />
+                                        </path>
+                                        <!-- mid box -->
+                                        <path d="M 50 40 L 79 59 L 50 79 L 21 59 Z" />
+                                        <!-- btm box -->
+                                        <path d="M 50 59 L 79 78 L 50 98 L 21 78 Z">
+                                            <animate attributeName="stroke"
+                                                values="rgba(100,100,100,0); rgba(255,255,255,1)" dur="2s"
+                                                repeatCount="indefinite" />
+                                        </path>
+                                        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                                            values="0 0; 0 -19" dur="2s" repeatCount="indefinite" />
+                                    </g>
+                                </svg>
+                                <div class="preloader__description">
+                                    Зачекайте ,будь&nbsp;ласка, йде обробка форми
                                 </div>
-                                <div class="form-group">
-                                    <p>Номер телефону</p>
-                                    <input type="tel" name="telephone" class="js-input-phone" onchange="validationForm()"/>
+                            </div>
+                            <div class="fetched">
+                                
+                                <div class="checkmark">
+                                    &#10003;
                                 </div>
-                                <div class="form-group">
-                                    <p>E-mail (необов'язково)</p>
-                                    <input type="email" name="email" class="js-input js-input-email" />
-                                </div>
-                                <div class="form-group">
-                                    <p>Ваш коментар</p>
-                                    <input type="text" name="comment" class="js-input" onchange="validationForm()"/>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit">Записатись на екскурсію</button>
-                                </div>
-                            </form>
-                        </div>
-                        <p id="howToFindUs" class="record__find-us">Карта нашого місцезнаходження</p>
-                        <iframe class="record__map"
+                                Заявку відправлено
+                            </div>
+                        </form>
+                    </div>
+                    <p id="howToFindUs" class="record__find-us">Карта нашого місцезнаходження</p>
+                    <iframe class="record__map"
                         src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4171.275684421371!2d28.535593334255886!3d49.52103026529923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDnCsDMxJzE1LjciTiAyOMKwMzInMjEuMCJF!5e0!3m2!1suk!2sua!4v1682761424141!5m2!1suk!2sua"
                         style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                
+
             </section>
 
         </main>
