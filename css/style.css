@@ -735,6 +735,7 @@ body.lock {
   padding: 10px;
   border-radius: 20px;
   box-shadow: 0.5px 0.5px 2px 1px rgba(164, 163, 163, 0.614);
+  background-color: rgba(249, 246, 237, 0.4392156863);
 }
 @media (max-width: 680px) {
   .bottle-wine__cards {
