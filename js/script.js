@@ -147,6 +147,20 @@ let validationForm = () => {
 
 }
 
+let showPreloader = () => {
+  let form = document.querySelectorAll('.form-group')
+  console.log(form)
+  for(let i = 0; i < form.length; i++) {
+    form[i].style.display = 'none';
+  }
+  let preloader = document.querySelector('.preloader')
+  preloader.style.display = 'flex'
+}
+
+let showAccept = () => {
+  
+}
+
 let sendForm = document.getElementById('tg')
 sendForm.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -155,8 +169,7 @@ sendForm.addEventListener('submit', function (e) {
   const CHAT_ID = '-1001905089338';
   const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
-  let message = `<b>Замовлення з сайту!</b>\n`;
-  message += `<b>Відправник: </b> ${this.name.value}\n`;
+  let message =  `<b>Відправник: </b> ${this.name.value}\n`;
   message += `<b>Номер телефону: </b> ${this.telephone.value}\n`;
   this.email.value.length > 0 ? message += `<b>Адреса електронної пошти: </b> ${this.email.value}\n` : console.log('Не вказана пошта');
   message += `<b>Коментар до замовлення: </b> ${this.comment.value}\n`;
@@ -167,7 +180,12 @@ sendForm.addEventListener('submit', function (e) {
       chat_id: CHAT_ID,
       parse_mode: 'html',
       text: message
-    }).then().catch().finally(() => {
+    }).then(() => {
+      document.getElementById('submitButton').disabled = true
+      showPreloader()
+    }
+    ).catch().finally(() => {
+      document.getElementById('submitButton').disabled = false
       this.name.value = ''
       this.email.value = ''
       this.telephone.value = ''
