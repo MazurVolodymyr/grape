@@ -759,6 +759,8 @@ body{
   }
   
   .form-group {
+    display: flex;
+    flex-direction: column;
     span {
         color: red;
     }
@@ -877,6 +879,25 @@ body{
         animation: textAnimE 2s ease-in-out infinite;
         color: #fff;
     }
+}
+
+.fetched {
+    display: none;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: green;
+    font-weight: 500;
+    font-size: 28px;
+    padding: 164.5px 0;
+}
+
+.checkmark {
+    
+    font-weight: 900;
+    font-size: 36px;
+    padding: 20px 0;
 }
 
 @keyframes inputAnim {

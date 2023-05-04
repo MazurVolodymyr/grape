@@ -96,6 +96,9 @@ for (let i = 0; i < cards.length; i++) {
 
 
 /* Скрипт валідації та відправки форми*/
+
+let isFetching = false
+
 let nullRequired = () => {
   let xArr = document.querySelectorAll("input");
   for(let i = 0; i<xArr.length; i++) {
@@ -147,9 +150,16 @@ let validationForm = () => {
 
 }
 
-let showPreloader = () => {
+/* let showPreloader = () => {
   let form = document.querySelectorAll('.form-group')
-  console.log(form)
+  for(let i = 0; i < form.length; i++) {
+    form[i].style.display = 'none';
+  }
+  let preloader = document.querySelector('.preloader')
+  preloader.style.display = 'flex'
+} */
+let togglePreloader = () => {
+  let form = document.querySelectorAll('.form-group')
   for(let i = 0; i < form.length; i++) {
     form[i].style.display = 'none';
   }
@@ -157,12 +167,10 @@ let showPreloader = () => {
   preloader.style.display = 'flex'
 }
 
-let showAccept = () => {
-  
-}
-
 let sendForm = document.getElementById('tg')
 sendForm.addEventListener('submit', function (e) {
+  togglePreloader()
+  document.getElementById('submitButton').disabled = true
   e.preventDefault();
 
   const TOKEN = '6006103677:AAEDNp3ZKzv6WYYU46bLOhUvjQrUzkeXdbA';
@@ -181,15 +189,21 @@ sendForm.addEventListener('submit', function (e) {
       parse_mode: 'html',
       text: message
     }).then(() => {
-      document.getElementById('submitButton').disabled = true
-      showPreloader()
+      
+      //console.log(res);
+      togglePreloader()
     }
     ).catch().finally(() => {
+      isFetching = false
       document.getElementById('submitButton').disabled = false
       this.name.value = ''
       this.email.value = ''
       this.telephone.value = ''
       this.comment.value = ''
+      let preloader = document.querySelector('.preloader')
+      preloader.style.display = 'none'
+      let accepted = document.querySelector('.fetched')
+      accepted.style.display = 'flex'
     })
   }
   
