@@ -887,11 +887,11 @@
                         <form id="tg" name="mainForm">
                             <div class="form-group">
                                 <p>Ваше ім'я</p>
-                                <input type="text" name="name" class="js-input" onchange="validationForm()" />
+                                <input type="text" name="name" class="js-input" onkeyup="validationForm()" />
                             </div>
                             <div class="form-group">
                                 <p>Номер телефону</p>
-                                <input type="tel" name="telephone" class="js-input-phone" onchange="validationForm()" />
+                                <input type="tel" name="telephone" class="js-input-phone" onkeyup="validationForm()" />
                             </div>
                             <div class="form-group">
                                 <p>E-mail (необов'язково)</p>
@@ -899,10 +899,10 @@
                             </div>
                             <div class="form-group">
                                 <p>Ваш коментар</p>
-                                <input type="text" name="comment" class="js-input" onchange="validationForm()" />
+                                <input type="text" name="comment" class="js-input" onkeyup="validationForm()"/>
                             </div>
                             <div class="form-group">
-                                <button type="submit" id="submitButton">Записатись на екскурсію</button>
+                                <button type="submit" id="submitButton" disabled="true">Записатись на екскурсію</button>
                             </div>
                             <div class="preloader">
                                 <svg viewBox="0 0 100 100">

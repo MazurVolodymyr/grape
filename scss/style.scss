@@ -1032,7 +1032,18 @@ body{
             transform: translate3d(0, 0, -1em);
         }
         &:disabled {
-            background: #000;
+            opacity: 0.2;
+        }
+        &:disabled::after {
+            display: none;
+            transition: .3s;
+        }
+        &:disabled::before {
+            display: none;
+            transition: .3s;
+        }
+        &:disabled:hover {
+            transform: translate(0, 0);
         }
       }
   }

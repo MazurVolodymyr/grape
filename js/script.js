@@ -123,6 +123,8 @@ let validationForm = () => {
   let nameElem = document.forms['mainForm']['name']
   let commElem = document.forms['mainForm']['comment']
 
+  let submitButton = document.getElementById('submitButton');
+
   let userName = nameElem.value
   !userName ? addErrorSpan(nameElem.parentNode, "Це поле обов'язкове") : nameElem.parentNode.querySelector('span') && nameElem.parentNode.removeChild(nameElem.parentNode.querySelector('span'))
   !userName ? nameElem.classList.add('rqrd') : nameElem.classList.remove('rqrd')
@@ -146,6 +148,11 @@ let validationForm = () => {
   let comment = commElem.value
   !comment ? addErrorSpan(commElem.parentNode, "Це поле обов'язкове") : commElem.parentNode.querySelector('span') && commElem.parentNode.removeChild(commElem.parentNode.querySelector('span'))
   !comment ? commElem.classList.add('rqrd') : commElem.classList.remove('rqrd')
+  if (userName && telNumber && comment && isValid) {
+    submitButton.disabled = false
+  } else {
+    submitButton.disabled = true
+  }
 
 }
 
